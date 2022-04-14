@@ -23,7 +23,7 @@ app.post('/guess/:gameID/:letter', async (req, res) => {
   if(!/^[а-я]$/.test(letter) || game.attempts.includes(letter) || game.guessedWord.includes(letter)) {
     return res.status(400).json({ error: 'Letter must be in range а-я and it cannot repeat previous attempts including guessed letters' })
   }
-  if (game.lives === 0) res.status(401).json({ error: 'You lost' })
+  if (game.lives === 0) return res.status(401).json({ error: 'You lost' })
   let newWord = await guess(game.guessedWord, game.attempts, letter)
   if(newWord === null) {
     if(game.actualWord.includes(letter)) {
