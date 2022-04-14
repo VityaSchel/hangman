@@ -1,0 +1,21 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently 'node server.js' 'mongod --port 12133 --dbpath=./.mongodb'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vityaschel <vityaschel@utidteam.com> (https://vityaschel.utidteam.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.9",
+    "nanoid": "^3.1.23",
+    "prompt": "^1.1.0"
+  }
+}

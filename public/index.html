@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='index.css' />
+  </head>
+  <body>
+    <div id='game' style='display: none'>
+      <div id='leftcol'>
+        <div id='input'>
+          <form id='submit'>
+            <input type='text' placeholder='Буква а-я' name='letter' pattern='^[а-я]$' id='letterinput' />
+            <input type='submit' id='submitbtn' />
+          </form>
+        </div>
+        <div id='state'></div>
+        <div id='attempts'>Попытки: (пусто)</div>
+      </div>
+      <div id='rightcol'>
+        <img src='frames/frame1.png' id='hangman' />
+      </div>
+    </div>
+    <div id='prize' style='display: none'></div>
+    <script type='text/javascript' src='index.js'></script>
+  </body>
+</html>
